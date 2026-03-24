@@ -22,16 +22,16 @@ jobs:
     - name: Run app.py
       run: |
         python app.py
-#   containerize:
-#     runs-on: ubuntu-latest
-#     needs: build
+  containerize:
+    runs-on: ubuntu-latest
+    needs: build
 
-#     steps:
-#     - name: Check out repository
-#       uses: actions/checkout@v2 
-#     - name: Build Docker image
-#       run: |
-#         docker build -t abc .  
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2 
+    - name: Build Docker image
+      run: |
+        docker build -t abc .  
 #   build_and_push:
 #     runs-on: ubuntu-latest
 #     needs: containerize
